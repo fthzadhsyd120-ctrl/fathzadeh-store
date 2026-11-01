@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوازم خانگی فتح‌زاده</title>
+
+<style>
+:root {
+    --blue: #1E3A8A;
+    --dark: #142B66;
+    --turquoise: #20B2AA;
+    --gold: #D4AF37;
+    --cream: #F3EBDD;
+    --white: #FFFDF7;
+    --red: #9E2635;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: var(--white);
+    color: #222;
+}
+
+button, input, select {
+    font-family: inherit;
+}
+
+/* صفحه ورود */
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #142B66, #1E3A8A, #20B2AA);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    transition: opacity .8s, visibility .8s;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-pattern {
+    position: absolute;
+    inset: -50%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent 0 35px,
+        #ffffff10 36px 38px
+    );
+    animation: patternMove 15s linear infinite;
+}
+
+@keyframes patternMove {
+    to { transform: translate(100px, 100px); }
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    animation: introAppear 1.5s ease;
+}
+
+@keyframes introAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.golden-ring {
+    width: 115px;
+    height: 115px;
+    margin: auto;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px #D4AF3780;
+    animation: ringPulse 2s infinite;
+}
+
+@keyframes ringPulse {
+    50% { box-shadow: 0 0 40px #D4AF37; }
+}
+
+.intro-logo {
+    font-size: 55px;
+}
+
+.intro-line {
+    width: 0;
+    height: 3px;
+    background: var(--gold);
+    margin: 25px auto;
+    animation: lineOpen 1.5s .5s forwards;
+}
+
+@keyframes lineOpen {
+    to { width: 230px; }
+}
+
+.intro h1 {
+    font-size: 27px;
+}
+
+.intro h2 {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.intro-subtitle {
+    font-size: 16px;
+}
+
+.intro-decoration {
+    color: var(--gold);
+    margin: 25px;
+}
+
+.enter-btn {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #D4AF3780;
+    transition: .3s;
+}
+
+.enter-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px var(--gold);
+}
+
+/* هدر */
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.brand {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* بنر متحرک */
+
+.hero {
+    min-height: 300px;
+    padding: 65px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(
+        120deg,
+        #142B66,
+        #1E3A8A,
+        #20B2AA,
+        #142B66
+    );
+    background-size: 300% 300%;
+    animation: heroBackground 8s ease infinite;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: clamp(24px, 4vw, 35px);
+    animation: titleAnimation 1.5s ease both;
+    text-shadow: 0 0 15px #D4AF3770;
+}
+
+.hero p {
+    font-size: 17px;
+    animation: subtitleAnimation 1.8s .4s ease both;
+}
+
+.hero button {
+    margin-top: 25px;
+    padding: 13px 30px;
+    border: 2px solid var(--gold);
+    border-radius: 25px;
+    background: var(--gold);
+    color: var(--dark);
+    font-weight: bold;
+    cursor: pointer;
+    animation: buttonAnimation 1.5s .8s ease both;
+    transition: .3s;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--gold);
+}
+
+@keyframes heroBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes titleAnimation {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subtitleAnimation {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes buttonAnimation {
+    from { opacity: 0; transform: scale(.7); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* بخش جستجو */
+
+.search-box {
+    text-align: center;
+    padding: 25px 15px;
+    background: var(--cream);
+}
+
+.search-box input {
+    width: min(600px, 95%);
+    padding: 14px;
+    border: 2px solid var(--gold);
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+.search-box input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #1E3A8A18; }
+.clear-search {
+    margin: 8px 5px; padding: 10px 18px; border: 0; border-radius: 20px;
+    background: var(--blue); color: white; cursor: pointer; font-size: 14px;
+}
+.search-count { margin: 7px 0 0; color: #555; font-size: 14px; }
+
+/* دسته بندی */
+
+.section-title {
+    text-align: center;
+    color: var(--dark);
+    margin: 35px 10px 20px;
+    font-size: 25px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.category {
+    background: white;
+    border: 1px solid #eee;
+    border-bottom: 4px solid var(--gold);
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.category:hover,
+.category.active {
+    background: var(--blue);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.category .icon {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* فیلتر زیرمجموعه */
+
+.subcategories {
+    padding: 5px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sub-btn {
+    border: 1px solid var(--blue);
+    background: white;
+    color: var(--blue);
+    border-radius: 20px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.sub-btn:hover,
+.sub-btn.active {
+    background: var(--blue);
+    color: white;
+}
+
+/* محصولات */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000012;
+    border: 1px solid #eee;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000020;
+}
+
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: #f8f8f8;
+    padding: 10px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    color: var(--dark);
+}
+
+.product-info p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.product button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.product button:hover {
+    background: var(--turquoise);
+}
+
+.empty {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+    grid-column: 1/-1;
+}
+
+/* پنل مدیریت */
+
+.admin {
+    background: var(--cream);
+    margin: 35px 15px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.admin h2 {
+    color: var(--dark);
+    text-align: center;
+}
+
+.admin-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.admin input,
+.admin select,
+.admin textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.admin textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+.main-btn {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* فوتر */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2.2;
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px;
+}
+
+.contact-buttons a {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--gold);
+    color: var(--dark);
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media(max-width:600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+nav {
+        justify-content: center;
+    }
+
+    .intro h1 {
+        font-size: 22px;
+    }
+
+    .intro h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* افزایش ملایم اندازه نوشته‌ها برای خوانایی بهتر */
+body { font-size: 17px; }
+nav a { font-size: 17px; }
+.brand { font-size: 24px; }
+.hero p { font-size: 18px; }
+.hero button, .enter-btn { font-size: 18px; }
+.search-box input { font-size: 16px; }
+.section-title { font-size: 27px; }
+.category { font-size: 17px; }
+.sub-btn { font-size: 16px; }
+.product-info p { font-size: 14px; }
+.product button, .main-btn { font-size: 16px; }
+.admin input, .admin select, .admin textarea { font-size: 15px; }
+.contact-buttons a { font-size: 16px; }
+/* طراحی حرفه‌ای‌تر کارت محصولات */
+.products {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    align-items: stretch;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #e8e5dd;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(20, 43, 102, .07);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, .65);
+    box-shadow: 0 12px 28px rgba(20, 43, 102, .13);
+}
+
+.product img {
+    display: block;
+    width: 100%;
+    height: 205px;
+    padding: 18px;
+    object-fit: contain;
+    background: linear-gradient(145deg, #fffdf7, #f3f0e8);
+    border-bottom: 1px solid #f0ede5;
+}
+
+.product-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 17px;
+    gap: 5px;
+}
+
+.product-info h3 {
+    margin: 0 0 5px;
+    color: var(--dark);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.product-info p {
+    margin: 2px 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.product-info p:nth-of-type(1) {
+    color: var(--blue);
+    font-size: 12px;
+}
+
+.product-info p:nth-of-type(2) {
+    color: #8a6b19;
+    font-weight: 600;
+}
+
+.product button {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.product button:hover {
+    background: var(--turquoise);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 12px;
+    }
+    .product { border-radius: 13px; }
+    .product img { height: 145px; padding: 12px; }
+    .product-info { padding: 11px; }
+    .product-info h3 { font-size: 14px; }
+    .product-info p { font-size: 11px; }
+    .product button { padding: 10px 7px; font-size: 12px; }
+}
+
+
+/* بهینه‌سازی نمایش در موبایل و تبلت */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+button, input, select, textarea { max-width: 100%; }
+
+@media (max-width: 768px) {
+  header { gap: 12px; padding: 14px 12px; }
+  nav { flex-wrap: wrap; gap: 8px 14px; }
+  nav a { padding: 6px 2px; }
+  .search-box { width: calc(100% - 24px); margin-inline: 12px; }
+  .categories, .subcategories { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-inline: 10px; }
+  .category, .sub-btn { max-width: 100%; }
+  .admin { margin: 22px 10px; padding: 16px; }
+  .admin form { width: 100%; }
+  .admin input, .admin select, .admin textarea { width: 100%; min-width: 0; }
+  footer { padding-inline: 14px; text-align: center; }
+}
+
+@media (max-width: 380px) {
+  .products { grid-template-columns: minmax(0, 1fr); }
+  .product img { height: 190px; }
+  .product-info h3 { font-size: 15px; }
+  .product-info p { font-size: 13px; }
+  .product button { font-size: 14px; }
+  .intro h1 { font-size: 20px; }
+  .intro h2 { font-size: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- صفحه ورود -->
+
+<div class="intro" id="intro">
+    <div class="intro-pattern"></div>
+
+    <div class="intro-content">
+        <div class="golden-ring">
+            <div class="intro-logo">🏠</div>
+        </div>
+
+        <div class="intro-line"></div>
+
+        <h1>به فروشگاه ما خوش آمدید</h1>
+        <h2>لوازم خانگی فتح‌زاده</h2>
+        <p class="intro-subtitle">
+            زیبایی، کیفیت و اصالت برای خانه شما
+        </p>
+
+        <div class="intro-decoration">✦ ━━━━━ ✦</div>
+
+        <button class="enter-btn" onclick="enterStore()">
+            ورود به فروشگاه ←
+        </button>
+
+        <p>منتظر انتخاب زیبای شما هستیم</p>
+    </div>
+</div>
+
+<!-- هدر -->
+
+<header>
+<div class="brand">
+        🏠 لوازم خانگی <span>فتح‌زاده</span>
+    </div>
+
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#categories">دسته‌بندی‌ها</a>
+        <a href="#products">محصولات</a>
+        <a href="#contact">تماس با ما</a>
+        <a href="#admin">مدیریت</a>
+    </nav>
+</header>
+
+<!-- بنر -->
+
+<section class="hero" id="home">
+    <h1>به فروشگاه لوازم خانگی فتح‌زاده خوش آمدید</h1>
+    <p>تنوع محصولات، انتخابی مناسب برای خانه شما</p>
+
+    <button onclick="scrollToCategories()">
+        مشاهده محصولات
+    </button>
+</section>
+
+<!-- جستجو -->
+
+<div class="search-box">
+    <input
+        type="search"
+        id="searchInput"
+        placeholder="🔍 نام محصول، برند یا دسته‌بندی را جستجو کنید..."
+        oninput="renderProducts()"
+        aria-label="جستجوی محصولات"
+    >
+    <button type="button" class="clear-search" onclick="clearProductSearch()">پاک کردن</button>
+    <p class="search-count" id="searchCount" aria-live="polite"></p>
+</div>
+
+<!-- دسته بندی -->
+
+<h2 class="section-title" id="categories">
+    دسته‌بندی محصولات
+</h2>
+
+<div class="categories" id="categoryList"></div>
+
+<div class="subcategories" id="subcategoryList"></div>
+
+<!-- محصولات -->
+
+<h2 class="section-title" id="products">
+    محصولات فروشگاه
+</h2>
+
+<div class="products" id="productList"></div>
+
+<!-- مدیریت -->
+
+<section class="admin" id="admin">
+    <h2>⚙️ پنل مدیریت محصولات</h2>
+
+    <p>
+        برای افزودن محصول، اطلاعات زیر را وارد کن.
+    </p>
+
+    <div class="admin-form">
+
+        <input
+            type="text"
+            id="productName"
+            placeholder="نام محصول"
+        >
+
+        <select id="productCategory"></select>
+
+        <select id="productSubcategory"></select>
+
+        <input
+            type="text"
+            id="productBrand"
+            placeholder="برند محصول"
+        >
+
+        <textarea
+            id="productDescription"
+            placeholder="توضیحات محصول"
+        ></textarea>
+
+        <input
+            type="file"
+            id="productImage"
+            accept="image/*"
+        >
+
+        <button class="main-btn" onclick="addProduct()">
+            افزودن محصول
+        </button>
+
+    </div>
+
+    <div id="adminProducts"></div>
+</section>
+
+<!-- فوتر -->
+
+<footer id="contact">
+
+    <h2>لوازم خانگی فتح‌زاده</h2>
+
+    <p>
+        کیفیت و اصالت، انتخابی برای خانه شما
+    </p>
+
+    <p>
+        📍 قم، نیروگاه، بلوار علی‌دوست،
+        نبش کوچه ۶، پلاک ۱۰۶
+    </p>
+
+    <p>
+        🕒 ساعت کاری: شنبه تا پنجشنبه، از ساعت ۶ عصر تا ۲۳ شب
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="tel:09126512823">
+            📞 تماس با فروشگاه: 09126512823
+        </a>
+
+        <a
+            href="https://wa.me/989126512823"
+            target="_blank"
+            rel="noopener"
+        >
+            واتساپ
+        </a>
+
+    </div>
+
+    <p>© تمامی حقوق متعلق به فروشگاه فتح‌زاده است.</p>
+
+</footer>
+
+<script>
+
+/* اطلاعات دسته‌بندی‌ها */
+
+const groups = [
+{
+    name: "لوازم سرمایشی",
+    icon: "🧊",
+    items: [
+        "یخچال تک",
+        "فریزر تک",
+        "یخچال فریزر دوقلو",
+        "ساید بای ساید",
+        "یخچال چهاردر",
+        "یخچال ویترینی",
+        "کولر گازی اسپلیت",
+        "کولر پرتابل",
+        "کولر آبی",
+        "پنکه سقفی",
+        "پنکه ایستاده",
+        "پنکه رومیزی"
+    ]
+},
+{
+    name: "لوازم پخت و پز",
+    icon: "🍳",
+    items: [
+        "اجاق گاز مبله",
+        "اجاق گاز صفحه‌ای",
+        "فر توکار",
+        "مایکروویو",
+        "سولاردام",
+        "آون توستر",
+        "سرخ‌کن بدون روغن",
+        "سرخ‌کن معمولی",
+        "پلوپز",
+        "آرام‌پز",
+        "زودپز",
+        "بخارپز",
+        "گریل",
+        "ساندویچ‌ساز",
+        "وافل‌ساز",
+        "نان‌ساز"
+    ]
+},
+{
+    name: "شست‌وشو و نظافت",
+    icon: "🧺",
+    items: [
+        "ماشین لباسشویی اتوماتیک",
+        "لباسشویی دوقلو",
+        "ماشین ظرفشویی رومیزی",
+        "ماشین ظرفشویی مبله",
+        "جاروبرقی کیسه‌ای",
+        "جاروبرقی بدون کیسه",
+        "جارو شارژی",
+        "جارو رباتیک",
+        "بخارشوی",
+        "مبل‌شوی",
+        "زمین‌شوی برقی",
+        "اتو بخار",
+        "اتو مخزن‌دار",
+        "بخارگر لباس"
+    ]
+},
+{
+    name: "لوازم کوچک آشپزخانه",
+    icon: "☕",
+    items: [
+        "چای‌ساز",
+        "کتری برقی",
+        "قهوه‌ساز",
+        "اسپرسوساز",
+        "آسیاب قهوه",
+        "آبمیوه‌گیری",
+        "مخلوط‌کن",
+        "غذاساز",
+        "خردکن",
+        "همزن برقی",
+        "گوشت‌کوب برقی",
+        "ترازو آشپزخانه",
+        "آسیاب برقی",
+        "آب مرکبات‌گیر",
+        "توستر",
+        "سماور برقی"
+    ]
+},
+{
+    name: "صوتی و تصویری",
+    icon: "📺",
+    items: [
+        "تلویزیون LED",
+        "تلویزیون QLED",
+        "تلویزیون OLED",
+        "تلویزیون هوشمند",
+        "سینمای خانگی",
+        "ساندبار",
+        "اسپیکر",
+        "سیستم صوتی",
+        "گیرنده دیجیتال",
+        "پروژکتور"
+    ]
+},
+{
+    name: "لوازم خانه",
+    icon: "🏠",
+    items: [
+        "بخاری گازی",
+        "بخاری برقی",
+        "شوفاژ برقی",
+        "آبگرمکن",
+        "تصفیه آب",
+        "تصفیه هوا",
+        "رطوبت‌ساز",
+        "رطوبت‌گیر",
+        "فن هیتر",
+        "پنکه مه‌پاش",
+        "ترازو دیجیتال",
+        "ساعت دیواری"
+    ]
+},
+{
+    name: "بلور و کریستال",
+    icon: "🍷",
+    items: [
+        "سرویس بلور",
+        "سرویس کریستال",
+        "سرویس لیوان",
+        "لیوان تکی",
+        "استکان و نعلبکی",
+        "پارچ و لیوان",
+        "میوه‌خوری",
+        "شیرینی‌خوری",
+        "شکلات‌خوری",
+        "آجیل‌خوری",
+        "قندان",
+        "گلدان بلوری",
+        "کاسه بلوری",
+        "بشقاب بلوری",
+        "دیس پذیرایی",
+        "اردوخوری",
+        "ظروف دکوری",
+        "ظروف پایه‌دار",
+        "شمعدان بلوری",
+        "سرویس چای‌خوری",
+        "سرویس آب‌خوری",
+        "سرویس پذیرایی"
+    ]
+},
+{
+    name: "ظروف آشپزخانه",
+    icon: "🍽️",
+    items: [
+        "سرویس غذاخوری",
+        "سرویس قابلمه",
+        "سرویس تابه",
+        "قابلمه تکی",
+        "ماهیتابه",
+        "سرویس چینی",
+        "ظروف آرکوپال",
+        "ظروف سرامیکی",
+        "ظروف پیرکس",
+        "ظروف ملامین",
+        "ظروف نگهدارنده غذا",
+        "بانکه و جای حبوبات",
+        "قاشق و چنگال",
+        "کارد و چاقو",
+        "سینی",
+        "کتری و قوری",
+        "دیگ و قابلمه"
+    ]
+},
+{
+    name: "لوازم شخصی برقی",
+    icon: "💇",
+    items: [
+        "سشوار",
+        "اتو مو",
+        "ماشین اصلاح",
+        "ریش‌تراش",
+        "فرکننده مو",
+        "برس حرارتی"
+    ]
+},
+{
+    name: "سایر محصولات",
+    icon: "📦",
+    items: [
+        "سایر لوازم خانگی"
+    ]
+}
+];
+
+/* وضعیت سایت */
+
+let products = JSON.parse(
+    localStorage.getItem("fathzadeh_products") || "[]"
+);
+
+let selectedCategory = "همه";
+let selectedSubcategory = "همه";
+
+/* صفحه ورود */
+
+function enterStore() {
+    const intro = document.getElementById("intro");
+
+    if (intro.classList.contains("hide")) return;
+
+    intro.classList.add("hide");
+}
+
+/* رفتن به دسته بندی */
+
+function scrollToCategories() {
+    document.getElementById("categories").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+/* نمایش دسته بندی ها */
+
+function renderCategories() {
+    const container = document.getElementById("categoryList");
+
+    container.innerHTML = "";
+
+    const allDiv = document.createElement("div");
+    allDiv.className = "category" + (selectedCategory === "همه" ? " active" : "");
+    allDiv.innerHTML = '<span class="icon">🛍️</span><strong>همه محصولات</strong>';
+    allDiv.onclick = () => {
+        selectedCategory = "همه";
+        selectedSubcategory = "همه";
+        renderCategories();
+        renderSubcategories();
+        renderProducts();
+    };
+    container.appendChild(allDiv);
+
+    groups.forEach(group => {
+
+        const div = document.createElement("div");
+
+        div.className =
+            "category" +
+            (selectedCategory === group.name ? " active" : "");
+
+        div.innerHTML = `
+            <span class="icon">${group.icon}</span>
+            <strong>${group.name}</strong>
+        `;
+
+        div.onclick = () => {
+            selectedCategory = group.name;
+            selectedSubcategory = "همه";
+
+            renderCategories();
+            renderSubcategories();
+            renderProducts();
+        };
+
+        container.appendChild(div);
+    });
+}
+
+/* نمایش زیر دسته ها */
+
+function renderSubcategories() {
+    const container =
+        document.getElementById("subcategoryList");
+
+    container.innerHTML = "";
+
+    if (selectedCategory === "همه") return;
+
+    const group = groups.find(
+        g => g.name === selectedCategory
+    );
+
+    if (!group) return;
+
+    const all = document.createElement("button");
+
+    all.className = "sub-btn";
+
+    all.textContent = "نمایش همه";
+
+    all.onclick = () => {
+        selectedSubcategory = "همه";
+        renderSubcategories();
+        renderProducts();
+    };
+
+    container.appendChild(all);
+
+    group.items.forEach(item => {
+
+        const btn = document.createElement("button");
+
+        btn.className =
+            "sub-btn" +
+            (selectedSubcategory === item ? " active" : "");
+
+        btn.textContent = item;
+
+        btn.onclick = () => {
+            selectedSubcategory = item;
+            renderSubcategories();
+            renderProducts();
+        };
+
+        container.appendChild(btn);
+    });
+}
+
+/* نمایش محصولات */
+
+function normalizeSearch(value) {
+    return String(value || "").toLowerCase()
+        .replace(/[ي]/g, "ی").replace(/[ك]/g, "ک")
+        .replace(/[أإآ]/g, "ا").replace(/‌/g, " ").trim();
+}
+
+function clearProductSearch() {
+    document.getElementById("searchInput").value = "";
+    renderProducts();
+}
+
+function renderProducts() {
+
+    const container = document.getElementById("productList");
+    const search = normalizeSearch(document.getElementById("searchInput").value);
+    const count = document.getElementById("searchCount");
+
+    container.innerHTML = "";
+
+    const filtered = products.filter(product => {
+
+        const matchesCategory =
+            selectedCategory === "همه" ||
+            product.category === selectedCategory;
+
+        const matchesSubcategory =
+            selectedSubcategory === "همه" ||
+            product.subcategory === selectedSubcategory;
+
+        const matchesSearch = !search ||
+            normalizeSearch(product.name).includes(search) ||
+            normalizeSearch(product.brand).includes(search) ||
+            normalizeSearch(product.subcategory).includes(search) ||
+            normalizeSearch(product.category).includes(search) ||
+            normalizeSearch(product.description).includes(search);
+
+        return matchesCategory &&
+            matchesSubcategory &&
+            matchesSearch;
+    });
+
+    count.textContent = `تعداد محصولات: ${filtered.length}`;
+
+    if (filtered.length === 0) {
+        container.innerHTML = `
+            <div class="empty">
+                ${search ? "محصولی با این عبارت پیدا نشد. نام یا برند دیگری را امتحان کن." : "هنوز محصولی برای نمایش وجود ندارد."}
+            </div>
+        `;
+        return;
+    }
+
+    filtered.forEach(product => {
+
+        const card = document.createElement("div");
+
+        card.className = "product";
+
+        const img = document.createElement("img");
+
+        img.src = product.image || "";
+
+        img.alt = product.name;
+        img.loading = "lazy";
+
+        const info = document.createElement("div");
+
+        info.className = "product-info";
+
+        const title = document.createElement("h3");
+        title.textContent = product.name;
+
+        const category = document.createElement("p");
+        category.textContent =
+            product.category + " | " + product.subcategory;
+
+        const brand = document.createElement("p");
+        brand.textContent = "برند: " + product.brand;
+
+        const description = document.createElement("p");
+        description.textContent = product.description;
+
+        const button = document.createElement("button");
+        button.textContent = "استعلام قیمت و موجودی";
+
+        button.onclick = () => {
+            window.open(
+                "https://wa.me/989126512823?text=" +
+                encodeURIComponent(
+                    "سلام، درباره محصول " +
+                    product.name +
+                    " لطفاً راهنمایی کنید."
+                ),
+                "_blank"
+            );
+        };
+
+        info.append(
+            title,
+            category,
+            brand,
+            description,
+            button
+        );
+
+        card.append(img, info);
+
+        container.appendChild(card);
+    });
+}
+
+/* پر کردن دسته بندی پنل مدیریت */
+
+function fillAdminCategories() {
+
+    const select =
+        document.getElementById("productCategory");
+
+    select.innerHTML = "";
+
+    groups.forEach(group => {
+
+        const option = document.createElement("option");
+
+        option.value = group.name;
+        option.textContent = group.name;
+
+        select.appendChild(option);
+    });
+
+    select.onchange = fillAdminSubcategories;
+
+    fillAdminSubcategories();
+}
+
+/* پر کردن زیر دسته پنل مدیریت */
+
+function fillAdminSubcategories() {
+
+    const category =
+        document.getElementById("productCategory").value;
+
+    const select =
+        document.getElementById("productSubcategory");
+
+    select.innerHTML = "";
+
+    const group = groups.find(g => g.name === category);
+
+    if (!group) return;
+
+    group.items.forEach(item => {
+
+        const option = document.createElement("option");
+
+        option.value = item;
+        option.textContent = item;
+
+        select.appendChild(option);
+    });
+}
+
+/* افزودن محصول */
+
+function addProduct() {
+
+    const name =
+        document.getElementById("productName").value.trim();
+
+    const category =
+        document.getElementById("productCategory").value;
+
+    const subcategory =
+        document.getElementById("productSubcategory").value;
+
+    const brand =
+        document.getElementById("productBrand").value.trim();
+
+    const description =
+        document.getElementById("productDescription").value.trim();
+
+    const file =
+        document.getElementById("productImage").files[0];
+
+    if (!name) {
+        alert("نام محصول را وارد کن.");
+        return;
+    }
+
+    if (!file) {
+        alert("تصویر محصول را انتخاب کن.");
+        return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+        alert("لطفاً یک فایل تصویری انتخاب کن.");
+        return;
+    }
+
+    if (file.size > 700 * 1024) {
+        alert("حجم تصویر باید کمتر از ۷۰۰ کیلوبایت باشد.");
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+
+        const product = {
+            id: Date.now(),
+            name,
+            category,
+            subcategory,
+            brand,
+            description,
+            image: event.target.result
+        };
+
+        products.push(product);
+
+        saveProducts();
+
+        clearForm();
+
+        renderProducts();
+
+        renderAdminProducts();
+
+        alert("محصول با موفقیت اضافه شد.");
+    };
+
+    reader.readAsDataURL(file);
+}
+
+/* ذخیره محصولات */
+
+function saveProducts() {
+
+    try {
+        localStorage.setItem(
+            "fathzadeh_products",
+            JSON.stringify(products)
+        );
+    } catch (error) {
+        alert(
+            "فضای ذخیره مرورگر کافی نیست. تصویر کوچک‌تری انتخاب کن."
+        );
+    }
+}
+
+/* پاک کردن فرم */
+
+function clearForm() {
+
+    document.getElementById("productName").value = "";
+    document.getElementById("productBrand").value = "";
+    document.getElementById("productDescription").value = "";
+    document.getElementById("productImage").value = "";
+}
+
+/* مدیریت محصولات */
+
+function renderAdminProducts() {
+
+    const container =
+        document.getElementById("adminProducts");
+
+    container.innerHTML = "<h3>محصولات ثبت‌شده</h3>";
+
+    products.forEach(product => {
+
+        const row = document.createElement("div");
+
+        row.style.cssText =
+            "background:white;padding:12px;margin:10px 0;border-radius:8px;";
+
+        const title = document.createElement("strong");
+
+        title.textContent =
+            product.name + " - " + product.category;
+
+        const btn = document.createElement("button");
+
+        btn.className = "delete-btn";
+
+        btn.textContent = "حذف محصول";
+
+        btn.onclick = () => {
+
+            if (!confirm("این محصول حذف شود؟")) return;
+
+            products = products.filter(
+                p => p.id !== product.id
+            );
+
+            saveProducts();
+
+            renderProducts();
+
+            renderAdminProducts();
+        };
+
+        row.append(title, document.createElement("br"), btn);
+
+        container.appendChild(row);
+    });
+}
+
+/* اجرای اولیه سایت */
+
+renderCategories();
+
+renderSubcategories();
+
+fillAdminCategories();
+
+renderProducts();
+
+renderAdminProducts();
+
+</script>
+
+</body>
+</html>
